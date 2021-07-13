@@ -1,0 +1,28 @@
+### Winlogbeat Config
+#Author: Overstreet
+
+
+#-------------Logs to Collect--------------------
+winlogbeat.event_logs:
+  - name: Application
+    ignore_older: 168h
+  - name: System
+    ignore_older: 168h
+  - name: Security
+    ignore_older: 168h
+  - name: Windows Powershell
+    ignore_older: 168h
+    event_id: 400,600
+  - name: Microsoft-Windows-Powershell/Operational
+    ignore_older: 168h
+  - name: Microsoft-Windows-Sysmon/Operational
+    ignore_older: 168h
+
+#-------------Elasticsearch Output--------------------
+#output.elasticsearch:
+#    hosts: [""]
+
+
+output.logstash:
+  # The Logstash hosts
+  hosts: [""]
