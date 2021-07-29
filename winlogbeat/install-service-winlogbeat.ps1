@@ -11,7 +11,7 @@ $workdir = Split-Path $MyInvocation.MyCommand.Path
 # Create the new service.
 New-Service -name winlogbeat `
   -displayName Winlogbeat `
-  -binaryPathName "`"$workdir\winlogbeat.exe`" -c `"$workdir\winlogbeat.yml`" -path.home `"$workdir`" -path.data `"C:\ProgramData\winlogbeat`" -path.logs `"C:\ProgramData\winlogbeat\logs`" -E logging.files.redirect_stderr=true"
+  -binaryPathName "`"$workdir\winlogbeat.exe`" --environment=windows_service -c `"$workdir\winlogbeat.yml`" --path.home `"$workdir`" --path.data `"$env:PROGRAMDATA\winlogbeat`" --path.logs `"$env:PROGRAMDATA\winlogbeat\logs`" -E logging.files.redirect_stderr=true"
 
 # Attempt to set the service to delayed start using sc config.
 Try {
