@@ -1,4 +1,4 @@
-# windowsdepoly
+# windowsdeploy
 A set of install scripts and configurations for Elastic Winglogbeat.
 
 Winlogbeats download location:
