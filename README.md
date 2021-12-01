@@ -2,7 +2,7 @@
 A set of install scripts and configurations for Elastic Winglogbeat.
 
 Winlogbeats download location:
-https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-7.13.3-windows-x86_64.zip
+https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-7.15.2-windows-x86_64.zip
 
 1. Copy windowsdeploy folder to desktop
 2. Add elastic server and port to windowsdeploy/winlogbeat/winlogbeat.yml
