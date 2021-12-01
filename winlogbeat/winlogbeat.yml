@@ -72,9 +72,7 @@ output.elasticsearch:
 
 setup.kibana:
     host: "https://172.18.0.10:5601"
-#    username: "elastic"
-#    password: "00e5033ae9366b319dd40224e2a8f949"
     protocol: "https"
 
-setup.dashboards.enabled: true
+#setup.dashboards.enabled: true
 xpack.monitoring.enabled: true
