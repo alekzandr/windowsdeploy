@@ -63,12 +63,32 @@ winlogbeat.event_logs:
 
 #-------------Elasticsearch Output--------------------
 output.elasticsearch:
-    hosts: ["myEShost:9200"]
+    hosts: ["https://172.18.0.10:9200"]
+    username: "elastic"
+
+    password: "00e5033ae9366b319dd40224e2a8f949"
+    protocol: "https"
+#    output.elasticsearch.ssl.verification_mode: none
+#    output.elasticsearch.ssl.certificate_authorities: "C:\\Program Files\\Winlogbeat\\ssl\\ca.crt"
+#    output.elasticsearch.ssl.certificate: "C:\\Program Files\\Winlogbeat\\ssl\\elasticsearch.crt"
+#    output.elasticsearch.ssl.key: "C:\\Program Files\\Winlogbeat\\ssl\\elasticsearch.key"
 
 setup.kibana:
-    host: "mykibanahost:5601"
+    host: "https://172.18.0.10:5601"
+#    username: "elastic"
+#    password: "00e5033ae9366b319dd40224e2a8f949"
+    protocol: "https"
+#    setup.kibana.ssl.enabled: true
+#    output.kibana.ssl.verification_mode: none
+#    output.kibana.ssl.certificate_authorities: "C:\\Program Files\\Winlogbeat\\ssl\\ca.crt"
+#    output.kibana.ssl.certificate: "C:\\Program Files\\Winlogbeat\\ssl\\elasticsearch.crt"
 
-setup.dashboards.enabled: true
+#    output.kibana.ssl.key: "C:\\Program Files\\Winlogbeat\\ssl\\elasticsearch.key"
+
+#setup.dashboards.enabled: true
+xpack.monitoring.enabled: true
+
+
 
 
 #output.logstash:
