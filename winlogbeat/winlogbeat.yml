@@ -1,5 +1,5 @@
 ### Winlogbeat Config
-#Author: Overstreet
+#Author: gravemind
 
 winlogbeat.event_logs:
   - name: Application
@@ -63,14 +63,16 @@ winlogbeat.event_logs:
 
 #-------------Elasticsearch Output--------------------
 output.elasticsearch:
-    hosts: ["myEShost:9200"]
+    hosts: ["https://172.18.0.10:9200"]
+    username: "elastic"
+    password: "00e5033ae9366b319dd40224e2a8f949"
+    protocol: "https"
+    ssl.verification_mode: none
+
 
 setup.kibana:
-    host: "mykibanahost:5601"
+    host: "https://172.18.0.10:5601"
+    protocol: "https"
 
-setup.dashboards.enabled: true
-
-
-#output.logstash:
-#  The Logstash hosts
-#  hosts: [""]
+#setup.dashboards.enabled: true
+xpack.monitoring.enabled: true
